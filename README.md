@@ -2,6 +2,8 @@
 
 This is an addon for Godot 4.2+ that adds a `NormalCombine` node to the visual shader system. This allows for combining two normal maps using the UDN, Whiteout, RNM and Unity blending methods.
 
+![image](https://github.com/user-attachments/assets/bf99915d-4ba0-491c-8b0f-a3384aa219d8) 
+
 # Methods
 
 For the Whiteout method, I followed Substance 3D Designer. I got the AddSub blending method from [this article](https://campi3d.com/External/MariExtensionPack/userGuide5R7/CustomBlendModes.html#AddSub2). The UDN method is the same as the Whiteout method, except it uses the Z channel from normal map 1 directly, without any calculation with normal map 2. For RNM and Unity, I followed [this Self Shadow article ](https://blog.selfshadow.com/publications/blending-in-detail/). Although the Self Shadow blog has the UDN and Whiteout methods, it requires unpacking and repacking the normal maps.

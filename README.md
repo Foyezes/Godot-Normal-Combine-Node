@@ -55,3 +55,8 @@ I copied the Unity blending method shown in Self Shadow.
 The difference between UDN and Whiteout are only that for UDN, the Z channel calculation is skipped. So UDN is slightly cheaper than Whiteout but it can be negligible. RNM is more costly as it needs to reorient the normal maps. At last Unity is most costly as it uses matrices. It's recommended to use UDN or Whiteout for most use cases, and RNM for detail oriented blending.
 
 There is option to skip normalization of the blended result. If your normal map looks ok without normalising, you can turn it off for better performance.
+
+# Installation
+
+Extract the zip file and copy the folder to your project. You'll need to restart the editor for the node to appear in visual shader.
+Alternatively, you can make a new gdscript file and copy and paste the code.

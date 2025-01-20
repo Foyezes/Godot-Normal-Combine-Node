@@ -48,7 +48,7 @@ func _get_property_name(index):
 		0:
 			return "Method"
 		1:
-			return "Normalised"
+			return "Normalized"
 
 func _get_property_options(index):
 	match index:

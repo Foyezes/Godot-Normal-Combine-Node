@@ -54,4 +54,4 @@ There is option to skip normalization of the blended result. If your normal map 
 # Installation
 
 Extract the zip file and copy the folder to your project. You'll need to restart the editor for the node to appear in visual shader.
-Alternatively, you can make a new gdscript file and copy and paste the code.
+Alternatively, you can make a new gdscript file and copy the code.

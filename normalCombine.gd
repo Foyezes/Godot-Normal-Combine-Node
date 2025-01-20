@@ -1,3 +1,7 @@
+# This node was created by Foyezes
+# x.com/Foyezes
+# bsky.app/profile/foyezes.bsky.social
+
 @tool
 extends VisualShaderNodeCustom
 class_name VisualShaderNodeNormalCombine

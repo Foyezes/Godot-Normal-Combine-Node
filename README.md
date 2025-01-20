@@ -15,40 +15,35 @@ For the Whiteout method, I followed Substance 3D Designer. I got the AddSub blen
 
 The X and Y channels are blended using the AddSub method, like in Substance 3D Designer. I used the Z channel from Normal Map 1 directly to make it cheaper than Whiteout.
 
-> return vec3(n1.rg + ((n2.rg - 0.5)), n1.z);
+	return vec3(n1.rg + ((n2.rg - 0.5)), n1.z);
 
 ## Whiteout
 
 The X and Y channels are blended using the AddSub method, the Z channels are being multiplied, like in Substance 3D Designer.
 
-> return vec3(n1.rg + ((n2.rg - 0.5)), n1.z * n2.z);
+	return vec3(n1.rg + ((n2.rg - 0.5)), n1.z * n2.z);
 
 ## RNM
 
 I copied the RNM blending method shown in Self Shadow.
 
-> vec3 n1 = n1_in * vec3(2, 2, 2) + vec3(-1, -1, 0);
-
-> vec3 n2 = n2_in * vec3(-2, -2, 2) + vec3(1, 1, -1);
-
-> return vec3(n1 * dot(n1, n2) / n1.z - n2) * 0.5 + 0.5;
+	vec3 n1 = n1_in * vec3(2, 2, 2) + vec3(-1, -1, 0);
+	vec3 n2 = n2_in * vec3(-2, -2, 2) + vec3(1, 1, -1);
+	return vec3(n1 * dot(n1, n2) / n1.z - n2) * 0.5 + 0.5;
 
 ## Unity
 
 I copied the Unity blending method shown in Self Shadow.
 
-> vec3 n1 = n1_in * 2.0 - 1.0;
-> vec3 n2 = n2_in * 2.0 - 1.0;
-				
-> mat3 nBasis = mat3(
-
->	vec3(n1.z, n1.y, -n1.x),
-
->	vec3(n1.x, n1.z, -n1.y),
-
->	vec3(n1.x, n1.y, n1.z));
-				
-> return vec3(n2.x * nBasis[0] + n2.y * nBasis[1] + n2.z * nBasis[2]) * 0.5 + 0.5;
+	vec3 n1 = n1_in * 2.0 - 1.0;
+	vec3 n2 = n2_in * 2.0 - 1.0;
+					
+	mat3 nBasis = mat3(
+		vec3(n1.z, n1.y, -n1.x),
+		vec3(n1.x, n1.z, -n1.y),	
+		vec3(n1.x, n1.y, n1.z));
+					
+	return vec3(n2.x * nBasis[0] + n2.y * nBasis[1] + n2.z * nBasis[2]) * 0.5 + 0.5;
 
 # Performance
 

@@ -47,7 +47,7 @@ I copied the Unity blending method shown in Self Shadow.
 
 # Performance
 
-The difference between UDN and Whiteout are only that for UDN, the Z channel calculation is skipped. So UDN is slightly cheaper than Whiteout but it can be negligible. RNM is more costly as it needs to reorient the normal maps. At last Unity is most costly as it uses matrices. It's recommended to use UDN or Whiteout for most use cases, and RNM for detail oriented blending.
+The difference between UDN and Whiteout are only that for UDN, the Z channel calculation is skipped. So UDN is slightly cheaper than Whiteout but it can be negligible. RNM is more costly as it needs to reorient the normal maps. Unity is the most expensive because it uses matrices. It's recommended to use UDN or Whiteout for most use cases, and RNM for detail oriented blending.
 
 There is option to skip normalization of the blended result. If your normal map looks ok without normalising, you can turn it off for better performance.
 
